@@ -2,12 +2,12 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-// Serve static Ultraviolet files
-app.use(express.static(path.join(__dirname, 'dist')));
+// Use static middleware
+app.use(express.static(path.join(process.cwd(), 'dist')));
 
-// Catch-all route to serve main page
+// Serve index.html for all routes
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist', 'uv.bundle.js')); // or index.html if it exists
+  res.sendFile(path.join(process.cwd(), 'dist', 'index.html'));
 });
 
 module.exports = app;
