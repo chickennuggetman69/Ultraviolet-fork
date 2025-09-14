@@ -14,7 +14,6 @@
 		"uv.d.ts",
 		"client.d.ts"
 	],
-	"type": "module",
 	"scripts": {
 		"build": "node build.js",
 		"dev": "node build.js --dev",
