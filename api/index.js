@@ -1,5 +1,3 @@
-import app from '../server.js';
+const app = require('../server.js');
 
-export default (req, res) => {
-  app(req, res);
-};
+module.exports = (req, res) => app(req, res);
