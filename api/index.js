@@ -1,5 +1,5 @@
-const app = require('../server.js'); // Adjust if server.js is named differently
+const app = require('../server.js'); // adjust if server.js is named differently
 
 module.exports = (req, res) => {
-  app(req, res); // Vercel serverless function calls Express app
+  app(req, res);
 };
