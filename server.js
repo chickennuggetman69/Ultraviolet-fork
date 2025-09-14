@@ -2,12 +2,12 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-// Serve the Ultraviolet build
+// Serve static Ultraviolet files
 app.use(express.static(path.join(__dirname, 'dist')));
 
-// Default route
+// Catch-all route to serve main page
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist', 'uv.bundle.js')); // Or the main HTML if it exists
+  res.sendFile(path.join(__dirname, 'dist', 'uv.bundle.js')); // or index.html if it exists
 });
 
 module.exports = app;
